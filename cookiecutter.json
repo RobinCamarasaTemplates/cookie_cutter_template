@@ -1,0 +1,13 @@
+{
+    "repo_name": "repo",
+    "description": "Description",
+
+    "author_name": "Author name : ",
+    "author_institution": "Author institution : ",
+    "author_position": "Author position : ",
+    "author_mail": "Author name : ",
+    "author_github": "Your github : ",
+    "_copy_without_render": [
+        "*{*"
+    ]
+}
