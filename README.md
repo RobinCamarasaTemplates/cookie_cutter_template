@@ -9,9 +9,7 @@ Cookie cutter template that allows to generate cookie cutter templating project
 ``` bash
 $ pip install cookiecutter
 ```
-
 or
-
 ``` bash
 $ conda config --add channels conda-forge
 $ conda install cookiecutter
@@ -20,15 +18,18 @@ $ conda install cookiecutter
 
 ## To start a new project, run
 ``` bash
-$ cookiecutter 
+$ cookiecutter https://github.com/RobinCamarasaTemplates/cookie_cutter_template.git
 ```
 
 ## To contribute
+- Clone repository
+```bash
+$ git clone https://github.com/RobinCamarasaTemplates/cookie_cutter_template.git
+```
 - Install the requirement
 ```bash
 $ pip install -r requirements.txt
 ```
-
 - Make sure that your modification works
 ```bash
 $ pytest tests/test.py

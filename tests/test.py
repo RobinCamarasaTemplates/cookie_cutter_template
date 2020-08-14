@@ -27,10 +27,14 @@ import subprocess
 ROOT = Path(__file__).parents[1]
 TESTS_ROOT = ROOT / 'test_output'
 EXTRA_CONTEXT = {
-    "repo_name": "repo",
-    "file_name": "test",
+    "project_name": "Awesome test",
     "description": "Description",
+    "remote_url": "https://github.com/test/test",
+
     "author_name": "John Doe",
+    "author_institution": "Lambda company",
+    "author_position": "Intern",
+    "author_mail": "john.doe@lambda.com",
     "author_github": "https://github.com/JohnDoe"
 }
 
@@ -58,11 +62,11 @@ def test_generate_project() -> None:
     )
 
     # Test project generation
-    project_name = EXTRA_CONTEXT['repo_name']
+    project_name = 'awesome-test'
     assert (TESTS_ROOT / project_name).exists()
     files = [
         'cookiecutter.json', 'LICENSE', 'README.md',
-        'requirements.txt'
+        'requirements.txt', 'Makefile'
     ]
     for file_ in files:
         assert (TESTS_ROOT / project_name/ file_).exists()
@@ -70,4 +74,11 @@ def test_generate_project() -> None:
     assert (
         TESTS_ROOT / project_name / 'tests' / 'test.py'
     ).exists()
+
+    process = subprocess.Popen(
+        ['pytest', 'test.py'],
+        cwd=(TESTS_ROOT / project_name / 'tests').resolve()
+    )
+    process.wait()
+    assert process.returncode == 0
 

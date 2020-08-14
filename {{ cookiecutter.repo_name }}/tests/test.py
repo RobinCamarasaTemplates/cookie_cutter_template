@@ -27,10 +27,12 @@ import subprocess
 ROOT = Path(__file__).parents[1]
 TESTS_ROOT = ROOT / 'test_output'
 EXTRA_CONTEXT = {
-    "repo_name": "repo",
+    "project_name": "Awesome test",
     "description": "Description",
+    "remote_url": "github.com",
 
     "author_name": "John Doe",
+    "author_institution": "john.doe@lambda.com",
     "author_position": "Intern",
     "author_github": "https://github.com/JohnDoe"
 }
@@ -59,5 +61,5 @@ def test_generate_project() -> None:
     )
 
     # Test project generation
-    project_name = EXTRA_CONTEXT['repo_name']
+    project_name = 'awesome-test'
     assert (TESTS_ROOT / project_name).exists()

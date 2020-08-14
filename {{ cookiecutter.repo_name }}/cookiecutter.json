@@ -1,7 +1,11 @@
 {
-    "repo_name": "repo",
+    "project_name": "repo",
     "description": "Description",
+    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "remote_url": "Remote url",
 
-    "author_name": "Author name : ",
-    "author_github": "Your github : "
+    "author_name": "Author name",
+    "author_institution": "Author institution",
+    "author_position": "Author position",
+    "author_github": "Author github"
 }

@@ -1,4 +1,4 @@
-# {{ cookiecutter.repo_name }}
+# {{ cookiecutter.project_name }}
 
 {{ cookiecutter.description }}
 
@@ -20,15 +20,18 @@ $ conda install cookiecutter
 
 ## To start a new project, run
 ``` bash
-$ cookiecutter 
+$ cookiecutter {{ cookiecutter.remote_url }}
 ```
 
 ## To contribute
+- Clone repository
+```bash
+$ git clone {{ cookiecutter.remote_url }}
+```
 - Install the requirement
 ```bash
 $ pip install -r requirements.txt
 ```
-
 - Make sure that your modification works
 ```bash
 $ pytest tests/test.py
@@ -36,4 +39,4 @@ $ pytest tests/test.py
 
 ## Authors
 The following authors contributed :
-- [Robin Camarasa](https://github.com/RobinCamarasa)
+- [{{ cookiecutter.author_name }}]({{ cookiecutter.remote_url }})

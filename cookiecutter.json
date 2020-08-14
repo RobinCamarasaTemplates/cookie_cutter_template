@@ -1,13 +1,17 @@
 {
-    "repo_name": "repo",
+    "project_name": "Project name",
     "description": "Description",
+    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "remote_url": "Remote url",
 
     "author_name": "Author name : ",
     "author_institution": "Author institution : ",
     "author_position": "Author position : ",
-    "author_mail": "Author name : ",
-    "author_github": "Your github : ",
+    "author_mail": "Author mail : ",
+    "author_github": "Author github : ",
     "_copy_without_render": [
-        "*{*"
+        "*{*",
+        "cookiecutter.json",
+        "README.md"
     ]
 }
