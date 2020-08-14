@@ -34,9 +34,9 @@ $ pip install -r requirements.txt
 ```
 - Make sure that your modification works
 ```bash
-$ pytest tests/test.py
+$ make
 ```
 
 ## Authors
 The following authors contributed :
-- [{{ cookiecutter.author_name }}]({{ cookiecutter.remote_url }})
+- [{{ cookiecutter.author_name }}]({{ cookiecutter.author_github }})

@@ -32,7 +32,7 @@ $ pip install -r requirements.txt
 ```
 - Make sure that your modification works
 ```bash
-$ pytest tests/test.py
+$ make
 ```
 
 ## Authors

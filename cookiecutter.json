@@ -11,7 +11,6 @@
     "author_github": "Author github : ",
     "_copy_without_render": [
         "*{*",
-        "cookiecutter.json",
-        "README.md"
+        "cookiecutter.json"
     ]
 }

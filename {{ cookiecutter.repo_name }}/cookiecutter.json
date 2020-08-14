@@ -1,8 +1,8 @@
 {
     "project_name": "repo",
     "description": "Description",
-    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "remote_url": "Remote url",
+    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
 
     "author_name": "Author name",
     "author_institution": "Author institution",
